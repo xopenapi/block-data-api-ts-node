@@ -99,10 +99,9 @@ export class CategoryResourceApi {
     /**
      * 删除分类资源
      * @summary 删除分类资源
-     * @param authorization 应用ID
      * @param id 删除分类资源
      */
-    public async categoryResourceIdDelete (authorization: string, id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
+    public async categoryResourceIdDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
         const localVarPath = this.basePath + '/categoryResource/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -116,17 +115,11 @@ export class CategoryResourceApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling categoryResourceIdDelete.');
-        }
-
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling categoryResourceIdDelete.');
         }
 
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -178,10 +171,9 @@ export class CategoryResourceApi {
     /**
      * 查询分类资源
      * @summary 查询分类资源
-     * @param authorization 应用ID
      * @param id 查询分类资源通过分类资源ID
      */
-    public async categoryResourceIdGet (authorization: string, id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FindOneCategoryResourceRsp;  }> {
+    public async categoryResourceIdGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FindOneCategoryResourceRsp;  }> {
         const localVarPath = this.basePath + '/categoryResource/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -195,17 +187,11 @@ export class CategoryResourceApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling categoryResourceIdGet.');
-        }
-
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling categoryResourceIdGet.');
         }
 
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -257,10 +243,9 @@ export class CategoryResourceApi {
     /**
      * 创建分类资源
      * @summary 创建分类资源
-     * @param authorization 应用ID
      * @param createCategoryResourceReq 
      */
-    public async categoryResourcePost (authorization: string, createCategoryResourceReq?: CreateCategoryResourceReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateCategoryResourceRsp;  }> {
+    public async categoryResourcePost (createCategoryResourceReq?: CreateCategoryResourceReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateCategoryResourceRsp;  }> {
         const localVarPath = this.basePath + '/categoryResource';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -273,12 +258,6 @@ export class CategoryResourceApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling categoryResourcePost.');
-        }
-
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -331,10 +310,9 @@ export class CategoryResourceApi {
     /**
      * 更新分类资源
      * @summary 更新分类资源
-     * @param authorization 应用ID
      * @param updateCategoryResourceReq 
      */
-    public async categoryResourcePut (authorization: string, updateCategoryResourceReq?: UpdateCategoryResourceReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateCategoryResourceRsp;  }> {
+    public async categoryResourcePut (updateCategoryResourceReq?: UpdateCategoryResourceReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateCategoryResourceRsp;  }> {
         const localVarPath = this.basePath + '/categoryResource';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -347,12 +325,6 @@ export class CategoryResourceApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling categoryResourcePut.');
-        }
-
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;

@@ -99,10 +99,9 @@ export class BlockConfigApi {
     /**
      * 删除BlockConfig
      * @summary 删除BlockConfig
-     * @param authorization 应用ID
      * @param id 删除BlockConfig
      */
-    public async blockConfigIdDelete (authorization: string, id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
+    public async blockConfigIdDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
         const localVarPath = this.basePath + '/blockConfig/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -116,17 +115,11 @@ export class BlockConfigApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling blockConfigIdDelete.');
-        }
-
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling blockConfigIdDelete.');
         }
 
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -178,10 +171,9 @@ export class BlockConfigApi {
     /**
      * 查询BlockConfig
      * @summary 查询BlockConfig
-     * @param authorization 应用ID
      * @param id 查询BlockConfig
      */
-    public async blockConfigIdGet (authorization: string, id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FindOneBlockConfigRsp;  }> {
+    public async blockConfigIdGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FindOneBlockConfigRsp;  }> {
         const localVarPath = this.basePath + '/blockConfig/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -195,17 +187,11 @@ export class BlockConfigApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling blockConfigIdGet.');
-        }
-
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling blockConfigIdGet.');
         }
 
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -257,10 +243,9 @@ export class BlockConfigApi {
     /**
      * 创建BlockConfig
      * @summary 创建BlockConfig
-     * @param authorization 应用ID
      * @param createBlockConfigReq 
      */
-    public async blockConfigPost (authorization: string, createBlockConfigReq?: CreateBlockConfigReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateBlockConfigRsp;  }> {
+    public async blockConfigPost (createBlockConfigReq?: CreateBlockConfigReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateBlockConfigRsp;  }> {
         const localVarPath = this.basePath + '/blockConfig';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -273,12 +258,6 @@ export class BlockConfigApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling blockConfigPost.');
-        }
-
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -331,10 +310,9 @@ export class BlockConfigApi {
     /**
      * 更新BlockConfig
      * @summary 更新BlockConfig
-     * @param authorization 应用ID
      * @param updateBlockConfigReq 
      */
-    public async blockConfigPut (authorization: string, updateBlockConfigReq?: UpdateBlockConfigReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateBlockConfigRsp;  }> {
+    public async blockConfigPut (updateBlockConfigReq?: UpdateBlockConfigReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateBlockConfigRsp;  }> {
         const localVarPath = this.basePath + '/blockConfig';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -347,12 +325,6 @@ export class BlockConfigApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling blockConfigPut.');
-        }
-
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;

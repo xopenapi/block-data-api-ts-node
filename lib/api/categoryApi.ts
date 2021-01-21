@@ -99,10 +99,9 @@ export class CategoryApi {
     /**
      * 删除分类
      * @summary 删除分类
-     * @param authorization 应用ID
      * @param id 删除分类
      */
-    public async categoryIdDelete (authorization: string, id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
+    public async categoryIdDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
         const localVarPath = this.basePath + '/category/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -116,17 +115,11 @@ export class CategoryApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling categoryIdDelete.');
-        }
-
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling categoryIdDelete.');
         }
 
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -178,10 +171,9 @@ export class CategoryApi {
     /**
      * 查询分类
      * @summary 查询分类
-     * @param authorization 应用ID
      * @param id 查询分类通过分类ID
      */
-    public async categoryIdGet (authorization: string, id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FindOneCategoryRsp;  }> {
+    public async categoryIdGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FindOneCategoryRsp;  }> {
         const localVarPath = this.basePath + '/category/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -195,17 +187,11 @@ export class CategoryApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling categoryIdGet.');
-        }
-
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling categoryIdGet.');
         }
 
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -257,10 +243,9 @@ export class CategoryApi {
     /**
      * 创建分类
      * @summary 创建分类
-     * @param authorization 应用ID
      * @param createCategoryReq 
      */
-    public async categoryPost (authorization: string, createCategoryReq?: CreateCategoryReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateCategoryRsp;  }> {
+    public async categoryPost (createCategoryReq?: CreateCategoryReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateCategoryRsp;  }> {
         const localVarPath = this.basePath + '/category';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -273,12 +258,6 @@ export class CategoryApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling categoryPost.');
-        }
-
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -331,10 +310,9 @@ export class CategoryApi {
     /**
      * 更新分类
      * @summary 更新分类
-     * @param authorization 应用ID
      * @param updateCategoryReq 
      */
-    public async categoryPut (authorization: string, updateCategoryReq?: UpdateCategoryReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateCategoryRsp;  }> {
+    public async categoryPut (updateCategoryReq?: UpdateCategoryReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateCategoryRsp;  }> {
         const localVarPath = this.basePath + '/category';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -347,12 +325,6 @@ export class CategoryApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling categoryPut.');
-        }
-
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;

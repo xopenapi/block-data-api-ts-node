@@ -99,10 +99,9 @@ export class BuildingApi {
     /**
      * 删除Building
      * @summary 删除Building
-     * @param authorization 应用ID
      * @param id 删除Building
      */
-    public async buildingIdDelete (authorization: string, id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
+    public async buildingIdDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
         const localVarPath = this.basePath + '/building/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -116,17 +115,11 @@ export class BuildingApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling buildingIdDelete.');
-        }
-
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling buildingIdDelete.');
         }
 
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -178,10 +171,9 @@ export class BuildingApi {
     /**
      * 查询Building
      * @summary 查询Building
-     * @param authorization 应用ID
      * @param id 查询Building
      */
-    public async buildingIdGet (authorization: string, id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FindOneBuildingRsp;  }> {
+    public async buildingIdGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FindOneBuildingRsp;  }> {
         const localVarPath = this.basePath + '/building/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -195,17 +187,11 @@ export class BuildingApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling buildingIdGet.');
-        }
-
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling buildingIdGet.');
         }
 
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -257,10 +243,9 @@ export class BuildingApi {
     /**
      * 创建Building
      * @summary 创建Building
-     * @param authorization 应用ID
      * @param createBuildingReq 
      */
-    public async buildingPost (authorization: string, createBuildingReq?: CreateBuildingReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateBuildingRsp;  }> {
+    public async buildingPost (createBuildingReq?: CreateBuildingReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateBuildingRsp;  }> {
         const localVarPath = this.basePath + '/building';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -273,12 +258,6 @@ export class BuildingApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling buildingPost.');
-        }
-
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -331,10 +310,9 @@ export class BuildingApi {
     /**
      * 更新Building
      * @summary 更新Building
-     * @param authorization 应用ID
      * @param updateBuildingReq 
      */
-    public async buildingPut (authorization: string, updateBuildingReq?: UpdateBuildingReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateBuildingRsp;  }> {
+    public async buildingPut (updateBuildingReq?: UpdateBuildingReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateBuildingRsp;  }> {
         const localVarPath = this.basePath + '/building';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -347,12 +325,6 @@ export class BuildingApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling buildingPut.');
-        }
-
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;

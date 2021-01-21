@@ -99,10 +99,9 @@ export class BuildingTemplateApi {
     /**
      * 删除模版
      * @summary 删除模版
-     * @param authorization 应用ID
      * @param id 删除模版
      */
-    public async buildingTemplateIdDelete (authorization: string, id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
+    public async buildingTemplateIdDelete (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
         const localVarPath = this.basePath + '/buildingTemplate/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -116,17 +115,11 @@ export class BuildingTemplateApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling buildingTemplateIdDelete.');
-        }
-
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling buildingTemplateIdDelete.');
         }
 
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -178,10 +171,9 @@ export class BuildingTemplateApi {
     /**
      * 查询模版
      * @summary 查询模版
-     * @param authorization 应用ID
      * @param id 查询模版通过模版ID
      */
-    public async buildingTemplateIdGet (authorization: string, id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FindOneBuildingTemplateRsp;  }> {
+    public async buildingTemplateIdGet (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FindOneBuildingTemplateRsp;  }> {
         const localVarPath = this.basePath + '/buildingTemplate/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -195,17 +187,11 @@ export class BuildingTemplateApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling buildingTemplateIdGet.');
-        }
-
         // verify required parameter 'id' is not null or undefined
         if (id === null || id === undefined) {
             throw new Error('Required parameter id was null or undefined when calling buildingTemplateIdGet.');
         }
 
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -257,10 +243,9 @@ export class BuildingTemplateApi {
     /**
      * 创建模版
      * @summary 创建模版
-     * @param authorization 应用ID
      * @param createBuildingTemplateReq 
      */
-    public async buildingTemplatePost (authorization: string, createBuildingTemplateReq?: CreateBuildingTemplateReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateBuildingTemplateRsp;  }> {
+    public async buildingTemplatePost (createBuildingTemplateReq?: CreateBuildingTemplateReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateBuildingTemplateRsp;  }> {
         const localVarPath = this.basePath + '/buildingTemplate';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -273,12 +258,6 @@ export class BuildingTemplateApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling buildingTemplatePost.');
-        }
-
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
@@ -331,10 +310,9 @@ export class BuildingTemplateApi {
     /**
      * 更新模版
      * @summary 更新模版
-     * @param authorization 应用ID
      * @param updateBuildingTemplateReq 
      */
-    public async buildingTemplatePut (authorization: string, updateBuildingTemplateReq?: UpdateBuildingTemplateReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateBuildingTemplateRsp;  }> {
+    public async buildingTemplatePut (updateBuildingTemplateReq?: UpdateBuildingTemplateReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateBuildingTemplateRsp;  }> {
         const localVarPath = this.basePath + '/buildingTemplate';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -347,12 +325,6 @@ export class BuildingTemplateApi {
         }
         let localVarFormParams: any = {};
 
-        // verify required parameter 'authorization' is not null or undefined
-        if (authorization === null || authorization === undefined) {
-            throw new Error('Required parameter authorization was null or undefined when calling buildingTemplatePut.');
-        }
-
-        localVarHeaderParams['Authorization'] = ObjectSerializer.serialize(authorization, "string");
         (<any>Object).assign(localVarHeaderParams, options.headers);
 
         let localVarUseFormData = false;
