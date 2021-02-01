@@ -101,7 +101,7 @@ export class BuildingApi {
      * @summary 创建Building
      * @param createBuildingReq 
      */
-    public async createBuilding (createBuildingReq?: CreateBuildingReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: CreateBuildingRsp;  }> {
+    public async createBuilding (createBuildingReq?: CreateBuildingReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateBuildingRsp;  }> {
         const localVarPath = this.basePath + '/building';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -147,7 +147,7 @@ export class BuildingApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: CreateBuildingRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CreateBuildingRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -168,7 +168,7 @@ export class BuildingApi {
      * @summary 删除Building
      * @param id 删除Building
      */
-    public async deleteBuilding (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: DeleteRsp;  }> {
+    public async deleteBuilding (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
         const localVarPath = this.basePath + '/building/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -219,7 +219,7 @@ export class BuildingApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: DeleteRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -240,7 +240,7 @@ export class BuildingApi {
      * @summary 查询Building
      * @param id 查询Building
      */
-    public async getBuilding (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: FindOneBuildingRsp;  }> {
+    public async getBuilding (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FindOneBuildingRsp;  }> {
         const localVarPath = this.basePath + '/building/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -291,7 +291,7 @@ export class BuildingApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: FindOneBuildingRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: FindOneBuildingRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -312,7 +312,7 @@ export class BuildingApi {
      * @summary 更新Building
      * @param updateBuildingReq 
      */
-    public async updateBuilding (updateBuildingReq?: UpdateBuildingReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: UpdateBuildingRsp;  }> {
+    public async updateBuilding (updateBuildingReq?: UpdateBuildingReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateBuildingRsp;  }> {
         const localVarPath = this.basePath + '/building';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -358,7 +358,7 @@ export class BuildingApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: UpdateBuildingRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: UpdateBuildingRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
