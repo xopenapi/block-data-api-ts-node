@@ -101,7 +101,7 @@ export class BuildingTemplateApi {
      * @summary 创建模版
      * @param createBuildingTemplateReq 
      */
-    public async createBuildingTemplate (createBuildingTemplateReq?: CreateBuildingTemplateReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: CreateBuildingTemplateRsp;  }> {
+    public async createBuildingTemplate (createBuildingTemplateReq?: CreateBuildingTemplateReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateBuildingTemplateRsp;  }> {
         const localVarPath = this.basePath + '/buildingTemplate';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -147,7 +147,7 @@ export class BuildingTemplateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: CreateBuildingTemplateRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CreateBuildingTemplateRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -168,7 +168,7 @@ export class BuildingTemplateApi {
      * @summary 删除模版
      * @param id 删除模版
      */
-    public async deleteBuildingTemplate (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: DeleteRsp;  }> {
+    public async deleteBuildingTemplate (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
         const localVarPath = this.basePath + '/buildingTemplate/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -219,7 +219,7 @@ export class BuildingTemplateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: DeleteRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -240,7 +240,7 @@ export class BuildingTemplateApi {
      * @summary 查询模版
      * @param id 查询模版通过模版ID
      */
-    public async getBuildingTemplate (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: FindOneBuildingTemplateRsp;  }> {
+    public async getBuildingTemplate (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FindOneBuildingTemplateRsp;  }> {
         const localVarPath = this.basePath + '/buildingTemplate/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -291,7 +291,7 @@ export class BuildingTemplateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: FindOneBuildingTemplateRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: FindOneBuildingTemplateRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -312,7 +312,7 @@ export class BuildingTemplateApi {
      * @summary 更新模版
      * @param updateBuildingTemplateReq 
      */
-    public async updateBuildingTemplate (updateBuildingTemplateReq?: UpdateBuildingTemplateReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: UpdateBuildingTemplateRsp;  }> {
+    public async updateBuildingTemplate (updateBuildingTemplateReq?: UpdateBuildingTemplateReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateBuildingTemplateRsp;  }> {
         const localVarPath = this.basePath + '/buildingTemplate';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -358,7 +358,7 @@ export class BuildingTemplateApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: UpdateBuildingTemplateRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: UpdateBuildingTemplateRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
