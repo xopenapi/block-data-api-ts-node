@@ -101,7 +101,7 @@ export class CategoryApi {
      * @summary 创建分类
      * @param createCategoryReq 
      */
-    public async createCategory (createCategoryReq?: CreateCategoryReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: CreateCategoryRsp;  }> {
+    public async createCategory (createCategoryReq?: CreateCategoryReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateCategoryRsp;  }> {
         const localVarPath = this.basePath + '/category';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -147,7 +147,7 @@ export class CategoryApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: CreateCategoryRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CreateCategoryRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -168,7 +168,7 @@ export class CategoryApi {
      * @summary 删除分类
      * @param id 删除分类
      */
-    public async deleteCategory (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: DeleteRsp;  }> {
+    public async deleteCategory (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
         const localVarPath = this.basePath + '/category/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -219,7 +219,7 @@ export class CategoryApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: DeleteRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -240,7 +240,7 @@ export class CategoryApi {
      * @summary 查询分类
      * @param id 查询分类通过分类ID
      */
-    public async getCategory (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: FindOneCategoryRsp;  }> {
+    public async getCategory (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FindOneCategoryRsp;  }> {
         const localVarPath = this.basePath + '/category/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -291,7 +291,7 @@ export class CategoryApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: FindOneCategoryRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: FindOneCategoryRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -312,7 +312,7 @@ export class CategoryApi {
      * @summary 更新分类
      * @param updateCategoryReq 
      */
-    public async updateCategory (updateCategoryReq?: UpdateCategoryReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: UpdateCategoryRsp;  }> {
+    public async updateCategory (updateCategoryReq?: UpdateCategoryReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateCategoryRsp;  }> {
         const localVarPath = this.basePath + '/category';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -358,7 +358,7 @@ export class CategoryApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: UpdateCategoryRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: UpdateCategoryRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);

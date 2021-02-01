@@ -101,7 +101,7 @@ export class BlockConfigApi {
      * @summary 创建BlockConfig
      * @param createBlockConfigReq 
      */
-    public async createBlockConfig (createBlockConfigReq?: CreateBlockConfigReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: CreateBlockConfigRsp;  }> {
+    public async createBlockConfig (createBlockConfigReq?: CreateBlockConfigReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateBlockConfigRsp;  }> {
         const localVarPath = this.basePath + '/blockConfig';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -147,7 +147,7 @@ export class BlockConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: CreateBlockConfigRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CreateBlockConfigRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -168,7 +168,7 @@ export class BlockConfigApi {
      * @summary 删除BlockConfig
      * @param id 删除BlockConfig
      */
-    public async deleteBlockConfig (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: DeleteRsp;  }> {
+    public async deleteBlockConfig (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }> {
         const localVarPath = this.basePath + '/blockConfig/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -219,7 +219,7 @@ export class BlockConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: DeleteRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: DeleteRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -240,7 +240,7 @@ export class BlockConfigApi {
      * @summary 查询BlockConfig
      * @param id 查询BlockConfig
      */
-    public async getBlockConfig (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: FindOneBlockConfigRsp;  }> {
+    public async getBlockConfig (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: FindOneBlockConfigRsp;  }> {
         const localVarPath = this.basePath + '/blockConfig/{id}'
             .replace('{' + 'id' + '}', encodeURIComponent(String(id)));
         let localVarQueryParameters: any = {};
@@ -291,7 +291,7 @@ export class BlockConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: FindOneBlockConfigRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: FindOneBlockConfigRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
@@ -312,7 +312,7 @@ export class BlockConfigApi {
      * @summary 更新BlockConfig
      * @param updateBlockConfigReq 
      */
-    public async updateBlockConfig (updateBlockConfigReq?: UpdateBlockConfigReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.ClientResponse; body: UpdateBlockConfigRsp;  }> {
+    public async updateBlockConfig (updateBlockConfigReq?: UpdateBlockConfigReq, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: UpdateBlockConfigRsp;  }> {
         const localVarPath = this.basePath + '/blockConfig';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -358,7 +358,7 @@ export class BlockConfigApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.ClientResponse; body: UpdateBlockConfigRsp;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: UpdateBlockConfigRsp;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
